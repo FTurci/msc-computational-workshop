@@ -1,9 +1,9 @@
 import numba as nb
 import numpy as np
 
-@nb.njit( (nb.double[:,:], nb.double[:,:], nb.double) )
-def collisions(r,v,collision_radius2):
+def collisions(r,v,collision_radius):
     """Resolve pairwise collisions"""
+    collision_radius2 = collision_radius*collision_radius
     N = len(r)
     for i in range(N-1):
         for j in range(i+1,N):
