@@ -16,6 +16,10 @@ def initialise(N,L,T):
 
 
 def evolve(r,v,L,dt,radius):
+    # pack all the dynamics in here:
+    # - time evolution
+    # - wall collisions
+    # - inter-particle collisions
 
     return r,v
 
